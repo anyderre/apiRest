@@ -23,6 +23,8 @@ public interface ParadaRepository extends CrudRepository<Parada, Long> {
     Parada save(Parada parada);
 
 
+    Parada findParadaBy_coordenada(Coordenada coordenada);
+
     //mostrar las paradas de una ruta dada
     List<Parada> findAllBy_ruta__id(long id);
 

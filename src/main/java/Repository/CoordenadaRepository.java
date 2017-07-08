@@ -15,4 +15,6 @@ public interface CoordenadaRepository extends CrudRepository<Coordenada, Long> {
     Coordenada findBy_id(Long id);
 
     Coordenada save(Coordenada coordenada);
+
+    List<Coordenada> findCoordenadaBy_latitudeAnd_longitude(double latitud, double longitud);
 }

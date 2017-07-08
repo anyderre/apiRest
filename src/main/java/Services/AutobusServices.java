@@ -56,7 +56,7 @@ public class AutobusServices {
     }
 
     public Autobus buscarUnAutobus(long id){
-        return autobusRepository.buscarUnAutobus(id);
+        return autobusRepository.findAutobusBy_id(id);
     }
 
     public Autobus buscarAutobusPorRaspberryMacddress(String macAddress){
@@ -65,5 +65,9 @@ public class AutobusServices {
 
     public List<Autobus> buscarAutobusActivosYPorRuta(boolean activo, Ruta ruta){
         return  autobusRepository.findAllBy_activoAnd_ruta(activo, ruta);
+    }
+
+    public Boolean modificarRutaAutobus(Autobus autobus){
+        return autobusRepository.modifyRutaActualAutobus(autobus.get_ruta(),autobus.get_id());
     }
 }

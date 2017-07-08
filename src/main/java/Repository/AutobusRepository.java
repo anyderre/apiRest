@@ -53,4 +53,9 @@ public interface AutobusRepository extends CrudRepository<Autobus,Long> {
     @Query("UPDATE Autobus a SET a._cantidadDePasajerosActual = :cantidadActual,a._ultimaParada=ultimaParada, a._ultimaFechaModificada=:ultimaFechaModificada WHERE a.id = :id")
     Boolean modifyCantidadPasajerosActualDelAutobusById(@Param("cantidadActual") int cantidadActual, @Param("ultimaParada") Parada ultimaParada, @Param("ultimaFechaModificada") long ultimaModificacion, @Param("id") long id);
 
+    //Modificando cantidad de pasajeros actual actual del autobus
+    @Modifying
+    @Query("UPDATE Autobus a SET a._ruta = :ruta WHERE a.id = :id")
+    Boolean modifyRutaActualAutobus(@Param("ruta") Ruta ruta, @Param("id") long id);
+
 }

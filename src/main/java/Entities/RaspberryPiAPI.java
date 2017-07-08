@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by anyderre on 28/06/17.
  */
 @Entity
-public class RaspberryPiAPI implements Serializable{
+public class  RaspberryPiAPI implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long _id;

@@ -20,7 +20,7 @@ public class Autobus implements  Serializable{
     private int _cantidadDeAsientos;
     private float _peso;
     @ManyToOne
-    private Ruta _ruta;
+    private Ruta _ruta; //Updatable
     @ManyToOne
     private Parada _ultimaParada; // Updatable
     private int _anoFabricacion;
